@@ -1,0 +1,23 @@
+@use "../breakpoints" as *;
+.whatsapp{
+  position: fixed;
+  z-index: 1;
+  inset: auto 15px 15px auto;
+  width: clamp(65px, 10vw, 80px);
+  border-radius: 50%;
+  animation: toRight 5s forwards;
+  opacity: 0;
+  &:hover{
+    opacity: 8;
+  }
+  img{
+    width: 100%;
+    border-radius: inherit;
+  }
+}
+
+@keyframes toRight {
+  to{
+    opacity: 1;
+  }
+}
