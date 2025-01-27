@@ -35,15 +35,15 @@ p {
 }
 
 h1 {
-  font-size: clamp(3.6rem, 4vw, 5.6rem);
+  font-size: clamp(2.8rem, 4vw, 5.6rem);
 }
 
 h2 {
-  font-size: clamp(2.6rem, 4vw, 4rem);
+  font-size: clamp(2.2rem, 4vw, 4rem);
 }
 
 h3 {
-  font-size: clamp(2.4rem, 3vw, 3.4rem);
+  font-size: clamp(2rem, 3vw, 3.4rem);
 }
 
 h4 {
@@ -51,18 +51,19 @@ h4 {
 }
 
 button {
-  width: 17.6rem;
-  height: 4.4rem;
+  width: 15rem;
+  height: 4rem;
   color: rgb(255, 247, 240);
   background-color: rgb(3, 3, 3);
-  font-weight: 700;
+  font-weight: 500;
   border-radius: 3rem;
   cursor: pointer;
 }
 @media (min-width: 768px) {
   button {
-    width: 22.8rem;
+    width: 24rem;
     height: 5.6rem;
+    font-weight: 700;
   }
 }
 button:active {
@@ -80,6 +81,10 @@ p {
 
 .visually_hidden {
   display: none;
+}
+
+h4 {
+  font-weight: 550;
 }
 
 header {
@@ -108,25 +113,6 @@ header button:hover {
     width: 6.4rem;
   }
 }
-.design_solutions ul:first-child {
-  background-color: rgb(54, 39, 124);
-}
-.design_solutions ul:nth-child(2) li:nth-child(1) {
-  background-color: rgb(169, 91, 19);
-}
-.design_solutions ul:nth-child(2) li:nth-child(2) {
-  background-color: rgb(153, 82, 82);
-}
-.design_solutions ul:nth-child(2) li:nth-child(3) {
-  background-color: rgb(179, 46, 22);
-}
-.design_solutions ul:nth-child(3) li:nth-child(1) {
-  background-color: rgb(30, 134, 115);
-}
-.design_solutions ul:nth-child(3) li:nth-child(2) {
-  background-color: rgb(55, 21, 43);
-}
-
 .design_solutions {
   text-align: center;
   padding: 6.6rem 5% 0 5%;
@@ -134,85 +120,29 @@ header button:hover {
 .design_solutions h1 {
   margin-bottom: 2.3rem;
 }
-.design_solutions .boxes {
-  display: grid;
-  grid-template-columns: 1rf;
-  gap: 2.4rem;
-  border-radius: 0.8rem;
-  margin-top: 6.4rem;
-}
-.design_solutions .boxes ul {
+.design_solutions ul {
+  margin-top: 5rem;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.4rem;
-  border-radius: 0.8rem;
+  gap: 1rem;
 }
-.design_solutions .boxes ul li {
-  height: 18.2rem;
-  border-radius: 0.8rem;
-  position: relative;
+.design_solutions ul li {
+  border: 1px solid rgb(215, 215, 215);
+  border-radius: 1rem;
+  padding-block: 2rem;
 }
-.design_solutions .boxes ul li img {
-  position: absolute;
-  top: 2.4rem;
-  right: 2.4rem;
-}
-.design_solutions .boxes ul li h4 {
-  position: absolute;
-  bottom: 2.4rem;
-  left: 2.4rem;
-  color: rgb(255, 247, 240);
-}
-.design_solutions .boxes ul:first-child {
-  min-height: 36.4rem;
-}
-.design_solutions .boxes ul:first-child li {
-  height: 100%;
-}
-.design_solutions .boxes ul:nth-child(2) {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.4rem;
-  border-radius: 0.8rem;
-}
-.design_solutions .boxes ul:nth-child(2) li:last-child {
-  grid-column: span 2;
+.design_solutions ul li img {
+  width: 50%;
 }
 
 @media (min-width: 768px) {
-  .design_solutions .boxes {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.4rem;
-    border-radius: 0.8rem;
-    margin-top: 8rem;
-  }
-  .design_solutions .boxes ul:last-child {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.4rem;
-    border-radius: 0.8rem;
-    grid-column: span 2;
+  .design_solutions ul {
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media (min-width: 1450px) {
-  .design_solutions {
-    padding: 6.6rem 10% 0 10%;
-  }
-  .design_solutions p {
-    padding-inline: 17vw;
-  }
-  .design_solutions .boxes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.4rem;
-    border-radius: 0.8rem;
-  }
-  .design_solutions .boxes ul:last-child {
-    grid-column: span 1;
-  }
-  .design_solutions .boxes ul:last-child li {
-    grid-column: span 2;
+  .design_solutions ul {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 .amy {
@@ -399,12 +329,6 @@ p, h1, h2, h3 {
   animation-range: cover 0% cover 30%;
 }
 
-.design_solutions ul {
-  animation: scale-down linear;
-  animation-timeline: view();
-  animation-range: cover 40% cover 100%;
-}
-
 .amy img {
   transform: translateX(-50%);
   animation: fly-in linear forwards;
@@ -430,7 +354,7 @@ p, h1, h2, h3 {
 }
 @keyframes fly-in {
   to {
-    transform: translateX(0%);
+    transform: translateX(0%) rotate(360deg);
   }
 }
 

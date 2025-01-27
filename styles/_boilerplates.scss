@@ -31,9 +31,9 @@ body{
 $font-sizes: (
   button: clamp(1.4rem, 2vw, 1.6rem),
   p: clamp(1.4rem, 2vw, 1.8rem),
-  h1: clamp(3.6rem, 4vw, 5.6rem),
-  h2: clamp(2.6rem, 4vw, 4rem),
-  h3: clamp(2.4rem, 3vw, 3.4rem),
+  h1: clamp(2.8rem, 4vw, 5.6rem),
+  h2: clamp(2.2rem, 4vw, 4rem),
+  h3: clamp(2rem, 3vw, 3.4rem),
   h4: 2.4rem
 );
 
@@ -44,16 +44,17 @@ $font-sizes: (
 }
 
 button{
-  width: 17.6rem;
-  height: 4.4rem;
+  width: 15rem;
+  height: 4rem;
   color: $white;
   background-color: $black;
-  font-weight: 700;
+  font-weight: 500;
   border-radius: 3rem;
   cursor: pointer;
     @include responsive($tablet){
-    width: 22.8rem;
+    width: 24rem;
     height: 5.6rem;
+    font-weight: 700;
   }
   &:active{
     opacity: 0.7;
@@ -69,4 +70,8 @@ p{
 .visually_hidden{
   display: none;
 }
+h4{
+  font-weight: 550;
+}
+
 

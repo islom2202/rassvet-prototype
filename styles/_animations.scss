@@ -7,13 +7,6 @@ p,h1,h2,h3{
 }
 
 // sections
-.design_solutions{
-    ul{
-      animation: scale-down linear;
-      animation-timeline: view();
-      animation-range: cover 40% cover 100%;
-    }
-}
 .amy{
   img{
     transform: translateX(-50%);
@@ -41,10 +34,7 @@ p,h1,h2,h3{
     }
   }
   @keyframes fly-in{
-    // from{
-    //   transform: translateX(-50%);
-    // }
     to{
-      transform: translateX(0%);
+      transform: translateX(0%) rotate(360deg);
     }
   }
