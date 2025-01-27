@@ -59,6 +59,9 @@ button {
   border-radius: 3rem;
   cursor: pointer;
 }
+button a {
+  font-size: inherit;
+}
 @media (min-width: 768px) {
   button {
     width: 24rem;
